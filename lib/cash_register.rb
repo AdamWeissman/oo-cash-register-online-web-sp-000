@@ -13,7 +13,8 @@ class CashRegister
   end
 
   def apply_discount
-    @total *= (discount.to_f / 100)
+    cash_value = @total * (discount.to_f / 100)
+    @total -= cash_value
   end
 
   def void_last_transaction
