@@ -15,11 +15,11 @@ class CashRegister
   def apply_discount
     cash_value = @total * (discount.to_f / 100)
     @total -= cash_value.to_i
-    if @discount == 0
-      return "There is no discount to apply."
-    elsif
+    #if @discount == 0
+    #  return "There is no discount to apply."
+    #elsif
       return "After the discount, the total comes to $#{total}."
-    end
+    #end
   end
 
   def void_last_transaction
